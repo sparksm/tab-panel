@@ -1,0 +1,80 @@
+<template class="main">
+	<style>
+		.tab-wrapper{
+			width:80%;
+			margin: 2em auto;
+		}
+		.tab-nav{
+			float:left;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			width: 25%;
+		}
+		.tab-nav > li{
+			cursor: pointer;
+			padding: 0.2em 3em 0.2em 1em;
+			margin-left:1em;
+			border-left: solid transparent 0.2em;
+			color: rgb(10,10,10);
+		}
+		.tab-nav > li:hover{
+			color: rgb(150,150,150);
+		}
+		.tab-nav > li.active{
+			border-color: #07a;
+			background: rgba(150,150,150,0.1);
+		}
+		.tab-nav > li.active:hover{
+			color: rgb(10,10,10);
+		}
+		.tab-content{
+			float:left;
+			width: 74%;
+			margin:0;
+			padding:0;
+			border-left: 1px solid #ccc;
+		}
+		.tab-content > div{
+			margin: 0 2em;
+			display: none;
+		}
+		.tab-content > div.active{
+			display: block;
+		}
+		.clearfix{
+			clear:both;
+			display: block;
+		}
+		a{
+			color:#07a;
+		}
+		
+		:host([scroll]) .tab-content > div{
+			display: block;
+		}
+		:host([scroll]) .tab-nav{
+			position: relative;
+		}
+		
+	</style>
+
+	<div class="tab-wrapper">
+		<ul class="tab-nav"></ul>
+		<div class="tab-content"></div>
+		<i class="clearfix"></i>
+	</div>
+</template>
+
+<template class="nav">
+	<li></li>
+</template>
+
+<template class="content">
+	<div class="tab-panel">
+		<h1></h1>
+		<div></div>
+	</div>
+</template>
+
+<script src="tab-panel.js"></script>
