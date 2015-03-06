@@ -155,7 +155,9 @@
 			}
 			item.classList.remove('active');
 		});
-		event.target.classList.add('active');
+		if (!host.hasAttribute('scroll')) {
+			event.target.classList.add('active');
+		}
 	};
 
 	e.animate = function (opts) {
